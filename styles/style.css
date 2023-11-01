@@ -45,12 +45,11 @@ ol {
   gap: 30px;
   align-items: end;
   min-width: 1140px;
-  min-height: 534px;
   margin: 133px 30px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -65,11 +64,10 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
-  max-height: 534px;
-  gap: 16px;
+  gap: 17px;
 }
- 
-.result__video-container{
+
+.result__video-container {
   width: 711px;
   height: 386px;
   position: relative;
@@ -89,7 +87,9 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
@@ -97,12 +97,12 @@ ol {
 
 .content__list {
   max-height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: relative;
 }
 
 .content__list-item:not(:last-child) {
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
 
 .content__details {
@@ -111,7 +111,6 @@ ol {
   gap: 26px;
   width: 100%;
   height: 100%;
-  
 }
 
 .content__video-card {
@@ -129,7 +128,7 @@ ol {
   width: 100%;
 }
 
-.content__card-link{
+.content__card-link {
   color: #fff;
   text-decoration: none;
   display: block;
@@ -137,7 +136,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -145,11 +144,46 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16.2px; 
+  line-height: 16.2px;
+}
+
+.search-form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 5px;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__textfield {
+  background-color: transparent;
+  min-width: 225px;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  appearance: none;
+}
+
+.search-form__textfield,
+input[type='checkbox'] + span,
+button {
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -162,37 +196,18 @@ ol {
   white-space: nowrap;
 }
 
-.search-form__fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  gap: 5px;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.search-form__textfield {
-  background-color: transparent;
-  min-width: 225px;
-  color: #fff;
-  font-family: inherit;
-  font-size: inherit;
-  border-left:none;
-  border-right: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  appearance: none;
-}
-
 .search-form__textfield::placeholder {
-  color: rgba(255, 255, 255, 0.70);
+  color: #fff;
+  opacity: 0.7;
 }
 
 .search-form__textfield:focus {
   outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  padding: 1px;
+  outline: 1px solid #fff;
 }
 
 .search-form__textfield:hover {
@@ -200,11 +215,6 @@ ol {
 }
 
 .search-form__textfield:active {
-  outline: 1px solid #fff;
-}
-
-.search-form__label:has(:focus-visible) {
-  padding: 1px;
   outline: 1px solid #fff;
 }
 
@@ -223,21 +233,16 @@ input[type='checkbox'] + span {
 }
 
 .search-form__pseudo-checkbox:active::before {
-  content: "";
+  content: '';
   width: 15px;
   height: 15px;
   background-color: #fff;
 }
 
-.search-form__textfield, 
-input[type='checkbox'] + span, 
-button {
-  cursor: pointer;
-}
-
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  align-items: start;
 }
 
 .search-form__label-text:hover {
@@ -246,9 +251,11 @@ button {
 
 .button {
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family:
+    Fira Sans Condensed,
+    sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -266,7 +273,7 @@ button {
 }
 
 .button:focus,
-.content__card-link:focus{
+.content__card-link:focus {
   outline: none;
 }
 
@@ -281,11 +288,11 @@ button {
   text-decoration: underline;
 }
 
-.button:active, 
+.button:active,
 .content__card-link:active {
   background-color: #545050;
 }
 
 .content__card-link_current {
-  background-color:#545050; 
+  background-color: #545050;
 }
