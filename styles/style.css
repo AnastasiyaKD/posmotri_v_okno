@@ -45,7 +45,7 @@ ol {
   gap: 30px;
   align-items: end;
   min-width: 1140px;
-  margin: 133px 30px;
+  margin: 0 30px;
 }
 
 .title {
@@ -55,6 +55,7 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  margin-top: auto;
 }
 
 .content__accent {
@@ -87,16 +88,14 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family:
-    Fira Sans Condensed,
-    sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
 }
 
 .content__list {
-  max-height: 298px;
+  height: 298px;
   overflow-y: auto;
   position: relative;
 }
@@ -144,9 +143,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family:
-    Fira Sans Condensed,
-    sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -159,9 +156,7 @@ ol {
   flex-direction: column;
   width: fit-content;
   gap: 5px;
-  font-family:
-    Fira Sans Condensed,
-    sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
@@ -206,7 +201,7 @@ button {
 }
 
 .search-form__label:has(:focus-visible) {
-  padding: 1px;
+  outline-offset: 1px;
   outline: 1px solid #fff;
 }
 
@@ -230,9 +225,19 @@ input[type='checkbox'] + span {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
 }
 
-.search-form__pseudo-checkbox:active::before {
+.search-form__pseudo-checkbox:active::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.search-form__checkbox:checked + span::before {
   content: '';
   width: 15px;
   height: 15px;
@@ -245,7 +250,7 @@ input[type='checkbox'] + span {
   align-items: start;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover {
   text-decoration: underline;
 }
 
@@ -253,23 +258,20 @@ input[type='checkbox'] + span {
   background-color: transparent;
   color: #fff;
   text-align: center;
-  font-family:
-    Fira Sans Condensed,
-    sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
   border: 1px solid #fff;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
 }
 
 .more-button {
   width: 399px;
-  height: 34px;
 }
 
 .button:focus,
@@ -279,7 +281,7 @@ input[type='checkbox'] + span {
 
 .button:focus-visible,
 .content__card-link:focus-visible {
-  padding: 2px;
+  outline-offset: 2px;
   outline: 1px solid #fff;
 }
 
